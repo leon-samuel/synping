@@ -58,7 +58,7 @@ def get_parsed_args():
 def get_ip(host):
     try:
         remote_ip = socket.gethostbyname(host)
-    except Exception, ex:
+    except Exception as ex:
         if 'Errno' in str(ex) or '-2' in str(ex) or 'not know' in str(ex):
             print '\nerror: unknown host'
         else:
